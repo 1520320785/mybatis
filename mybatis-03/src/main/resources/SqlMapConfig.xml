@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置别名-->
+    <typeAliases>
+        <package name="com.leihui.domain"/>
+    </typeAliases>
+     <!--配置环境-->
+    <environments default="mysql">
+        <!--配置mysql环境-->
+        <environment id="mysql">
+            <!--配置事务-->
+            <transactionManager type="JDBC"/>
+            <!--配置连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis01"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--配置映射文件位置-->
+    <mappers>
+        <!--<mapper resource="com/leihui/dao/UserDao.xml"/>-->
+        <!--<mapper resource="com/leihui/dao/AccountDao.xml"/>-->
+        <package name="com.leihui.dao"/>
+        <!--<mapper resource="com.leihui.dao.RoleDao.xml"/>-->
+    </mappers>
+</configuration>
