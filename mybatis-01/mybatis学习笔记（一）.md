@@ -1,4 +1,3 @@
-#mybatis01
 ### 使用mybatis遇到的问题
 
 第一个问题   mybatis读取配置文件时，出现空指针异常
